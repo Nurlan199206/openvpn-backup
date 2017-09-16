@@ -1,0 +1,6 @@
+#!/usr/bin/expect -f
+spawn openvpn --config OpenVPN.ovpn
+match_max 100000
+expect "*?assword:*"
+send -- "1234"  //OpenVPN passcode
+send -- "\r"
