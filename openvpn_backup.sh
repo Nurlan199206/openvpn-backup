@@ -3,13 +3,13 @@ fold=$(date +%Y%m%d)
 ./ask
 sleep 25
 if
-mount -t cifs //10.8.0.1/data/ /mnt/1C/ -o dom=WORKGROUP,user=ccg5,pass=63jyNd2d
+mount -t cifs //10.8.0.1/data/ /mnt/1C/ -o dom=WORKGROUP,user=user,pass=password
 then echo "remote share \\data on 10.8.0.1 mounted"
 else echo "not mounted"
 fi
 sleep 10
 if
-mount -t cifs //172.27.1.50/1C/ /mnt/nas -o dom=WORKGROUP,user=nurlan,pass=ccgalmaty,vers=2.0
+mount -t cifs //172.27.1.50/1C/ /mnt/nas -o dom=WORKGROUP,user=user,pass=password,vers=2.0
 then echo "NAS remote share folder mounted..."
 fi
 rsync -rPz --progress /mnt/1C/CCG/base/ /mnt/nas/$fold
