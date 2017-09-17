@@ -16,7 +16,7 @@ then echo "NAS remote share folder mounted..."
 fi
 rsync -rPzv --progress /mnt/1C/CCG/base/ /mnt/nas/$fold
 if [ "$rsync" -eq "100" ]
-then echo "backed up successfully... unmounting remote share /mnt/nas and /mnt/1C" && umount -l /mnt/nas && umount -l /mnt/1C
+then echo "backed up successfully... unmounting remote shares /mnt/nas and /mnt/1C" && umount -l /mnt/nas && umount -l /mnt/1C
 else
 echo "Backup failed..."
 fi
