@@ -1,5 +1,5 @@
 #!/usr/bin/expect -f
-spawn openvpn --config OpenVPN.ovpn
+spawn openvpn --config /home/nurlan/client.conf
 match_max 100000
 expect "*?assword:*"
 send -- "1234"  //OpenVPN passcode
