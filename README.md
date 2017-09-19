@@ -13,6 +13,8 @@ P.S файл openvpn2_backup.sh доработанная версия.
 
 P.P.S в openvpn client.conf указываем пути до сертификатов ПОЛНОСТЬЮ иначе в кроне скрипт работать не будет!!!
 
+ПРИМЕР!!!
+
 pkcs12 /etc/openvpn/cert.p12
 tls-auth /etc/openvpn/ta.key 1
 
