@@ -1,7 +1,7 @@
 #!bin/bash
 fold=$(date +%Y%m%d)
 rsync=100
-./ask
+/usr/bin/expect -f ask
 sleep 25
 if
 mount -t cifs //10.8.0.1/data/ /mnt/1C/ -o dom=WORKGROUP,user=user,pass=password
